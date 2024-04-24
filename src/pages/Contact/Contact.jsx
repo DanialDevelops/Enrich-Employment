@@ -174,7 +174,7 @@ const Contact = () => {
                     Phone
                   </Text>
                   <Text color="black" fontSize="12px" fontWeight={"medium"}>
-                    +1 123 456 7890
+                  (905) 965-0448
                   </Text>
                 </VStack>
               </Flex>
@@ -188,7 +188,7 @@ const Contact = () => {
                     Address
                   </Text>
                   <Text color="black" fontSize="12px" fontWeight={"medium"}>
-                    123 Example St, City
+                  5800 Ambler Dr #210, Mississauga, ON L4W 4J4
                   </Text>
                 </VStack>
               </Flex>

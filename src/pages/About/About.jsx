@@ -2,17 +2,17 @@ import { Flex, VStack, Text, Image, Divider } from "@chakra-ui/react";
 
 const About = () => {
   return (
-    <Flex>
+    <Flex flexDirection={{base: 'column', md:"row"}}>
       <Flex
         h="800px"
-        w="50%"
+        w={{ base: "100%", md: "50%" }}
         bg="#1B5D4F"
         justifyContent={"center"}
         alignItems={"center"}
       >
         <Flex>
           <VStack>
-          <Text fontSize={{ base: 24, md: 55 }} w={"50%"} color={"white"}>About Us</Text>
+          <Text fontSize={{ base: 42, md: 55 }} w={"50%"} color={"white"}>About Us</Text>
           <Divider w={"50%"}/>
           <Text w={"50%"} color={"white"}>
             Client satisfaction is our top priority at Enrich Employment, We
@@ -26,9 +26,10 @@ const About = () => {
       </Flex>
 
       <Image 
+      display={{ base: "none", md: "block" }}
       objectFit='cover'
     src='./WorkSpace.jpg'
-    alt='Dan Abramov' w={"50%"} h={"800px"}/>
+    alt='Dan Abramov' w={{ base: "100%", md: "50%" }} h={"800px"}/>
     
     </Flex>
   );
