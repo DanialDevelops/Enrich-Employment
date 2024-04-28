@@ -6,4 +6,5 @@ export default defineConfig({
     outDir: 'docs',
   },
   plugins: [react()],
+  base: "/Enrich-Employment/"
 });
