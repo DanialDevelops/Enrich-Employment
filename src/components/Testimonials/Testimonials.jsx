@@ -3,6 +3,7 @@ import { FaStar } from 'react-icons/fa';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Brick from '../../assets/Brick.jpg';
 
 const Testimonials = () => {
   const testimonials = [
@@ -30,7 +31,7 @@ const Testimonials = () => {
   };
 
   return (
-    <Flex justify="center" align="center" bg="white" h={"600px"} bgImage={"./Brick.jpg"} flexDirection={"column"}>
+    <Flex justify="center" align="center" bg="white" h={"600px"} bgImage={Brick} flexDirection={"column"}>
       <VStack>
         <Text fontSize={48} color={"black"}>Our Clients</Text>
         <Text fontSize={48} color={"#1B5D4F"} fontWeight={"bold"}>Testimonials</Text> 

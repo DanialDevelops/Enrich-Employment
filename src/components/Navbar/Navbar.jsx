@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import Hamburger from "hamburger-react";
 import { useState } from "react";
 import { AiFillHome, AiOutlineTeam, AiOutlineSetting } from "react-icons/ai";
+import EnrichLogo from "../../assets/EnrichLogo.jpeg";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -29,7 +30,7 @@ const Navbar = () => {
           maxW="container.xl"
           justifyContent={"space-around"}
         >
-          <Image src="./EnrichLogo.jpeg" display={"inline"} />
+          <Image src={EnrichLogo} display={"inline"} />
           <Flex flexDirection={"column"} justifyContent={"center"}>
             <Box
               display={{ base: "flex", md: "none" }}

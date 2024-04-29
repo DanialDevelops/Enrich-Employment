@@ -1,5 +1,6 @@
 import { Flex, Box, Text, Button } from "@chakra-ui/react";
 import { Link as RouterLink } from 'react-router-dom';
+import Group from "../../assets/Group.jpg";
 
 const Slider = () => {
   return (
@@ -14,7 +15,7 @@ const Slider = () => {
         position="relative"
         w="100%"
         h="600px"
-        bgImage={`url('./Group.jpg')`}
+        bgImage={`url(${Group})`}
         bgSize="cover"
         bgPosition="center"
         justifyContent="center"

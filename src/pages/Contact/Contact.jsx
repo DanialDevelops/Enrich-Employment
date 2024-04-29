@@ -14,6 +14,8 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { AiOutlineMail, AiOutlineUpload } from "react-icons/ai";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useRef, useState } from "react";
+import Book from "../../assets/Book.jpg";
+import EnrichMap from "../../assets/EnrichMap.png";
 
 
 const Contact = () => {
@@ -84,7 +86,7 @@ const Contact = () => {
           left={0}
           right={0}
           bottom={0}
-          bgImage="url('./Book.jpg')"
+          bgImage={`url(${Book})`}
           backgroundSize="cover"
           backgroundPosition="center center"
           opacity={0.8}
@@ -208,7 +210,7 @@ const Contact = () => {
             </VStack>
             <Image
             display={{ base: "none", md: "block" }}
-              src="./EnrichMap.png"
+              src={EnrichMap}
               alt="Contact"
               objectFit="cover" 
               height="100%"
