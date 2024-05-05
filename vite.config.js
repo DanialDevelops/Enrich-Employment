@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   build: {
-    outDir: 'docs',
+    outDir: 'build',
   },
   plugins: [react()],
-  base: "/Enrich-Employment/"
+  base: '/'  
 });

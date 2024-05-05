@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import Hamburger from "hamburger-react";
 import { useState } from "react";
 import { AiFillHome, AiOutlineTeam, AiOutlineSetting } from "react-icons/ai";
+import { GrContactInfo } from "react-icons/gr";
 import EnrichLogo from "../../assets/EnrichLogo.jpeg";
 
 const Navbar = () => {
@@ -111,6 +112,26 @@ const Navbar = () => {
                     >
                       <AiOutlineSetting />
                       Services
+                    </Box>
+                  </LinkOverlay>
+                </Link>
+              </LinkBox>
+              <Divider />
+              <LinkBox>
+                <Link to="/contact" style={{ textDecoration: "none" }}>
+                  <LinkOverlay>
+                    <Box
+                      fontSize={25}
+                      fontWeight={"medium"}
+                      color={"white"}
+                      _hover={{ fontSize: 34, fontWeight: "semibold" }}
+                      transition="all 0.3s ease"
+                      display={"flex"}
+                      alignItems={"center"}
+                      gap={3}
+                    >
+                      <GrContactInfo />
+                      Contact
                     </Box>
                   </LinkOverlay>
                 </Link>

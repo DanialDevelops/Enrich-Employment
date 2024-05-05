@@ -17,13 +17,12 @@ import { useRef, useState } from "react";
 import Book from "../../assets/Book.jpg";
 import EnrichMap from "../../assets/EnrichMap.png";
 
-
 const Contact = () => {
   const themeGreen = "#1B5D4F";
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [selectedFile, setSelectedFile] = useState('');
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [selectedFile, setSelectedFile] = useState("");
   const fileInputRef = useRef(null);
 
   const handleFirstNameChange = (event) => setFirstName(event.target.value);
@@ -32,31 +31,31 @@ const Contact = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault(); // Prevent default form submission
-  
+
     const formData = new FormData();
-    formData.append('firstName', firstName); // Assuming you have state hooks for these
-    formData.append('lastName', lastName);
-    formData.append('email', email);
-    formData.append('resume', fileInputRef.current.files[0]); // Make sure 'resume' matches the backend
-  
+    formData.append("firstName", firstName); // Assuming you have state hooks for these
+    formData.append("lastName", lastName);
+    formData.append("email", email);
+    formData.append("resume", fileInputRef.current.files[0]); // Make sure 'resume' matches the backend
+
     try {
-      const response = await fetch('http://localhost:5000/submit', {
-        method: 'POST',
+      const response = await fetch("http://localhost:5000/submit", {
+        method: "POST",
         body: formData, // formData will be sent as 'multipart/form-data'
       });
-  
+
       const result = await response.json(); // Assuming the server sends back JSON
       if (response.ok) {
-        console.log('Success:', result);
-        alert('Form submitted successfully');
+        console.log("Success:", result);
+        alert("Form submitted successfully");
         // You may want to reset the form or handle the success scenario
       } else {
         // Handle non-200 responses
-        throw new Error(result.message || 'An error occurred');
+        throw new Error(result.message || "An error occurred");
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('Failed to submit the form');
+      console.error("Error submitting form:", error);
+      alert("Failed to submit the form");
       // You may want to display this error message on the page
     }
   };
@@ -68,9 +67,8 @@ const Contact = () => {
     }
   };
 
-
   return (
-    <Flex h={"120vh"} bg={"white"}>
+    <Flex h={"90vh"} bg={"white"}>
       <Box
         position="relative"
         display="flex"
@@ -94,7 +92,7 @@ const Contact = () => {
         />
 
         <Text
-          fontSize={{ base: "14px", md: "55px" }}
+          fontSize={{ base: "42px", md: "55px" }}
           color="white"
           zIndex="docked"
         >
@@ -115,11 +113,11 @@ const Contact = () => {
           bg={"white"}
           boxShadow={"xl"}
         >
-          <VStack w={"full"}>
-            <Text color={themeGreen} fontSize={48}>
-              Leave Us A Message
-            </Text>
-            <Flex gap={4} w={"full"}>
+          {/* <VStack w={"full"}> */}
+          <Text color={themeGreen} fontSize={48}>
+            Leave Us A Message
+          </Text>
+          {/* <Flex gap={4} w={"full"}>
               <FormControl isRequired>
                 <FormLabel color={themeGreen}>First name</FormLabel>
                 <Input border={"1px solid gray"} placeholder="First name" onChange={handleFirstNameChange} />
@@ -164,9 +162,14 @@ const Contact = () => {
           </VStack>
           <Button mt={4} bg={"#11374E"} type="submit" w={"full"} onClick={handleSubmit}>
             Submit
-          </Button>
+          </Button> */}
           <Flex align="stretch">
-            <VStack pt={10} spacing={4} align="stretch" justifyContent={"space-around"}>
+            <VStack
+              pt={10}
+              spacing={4}
+              align="stretch"
+              justifyContent={"space-around"}
+            >
               <Flex align="center">
                 <Box mr={5}>
                   <FaPhoneAlt size={50} color={themeGreen} />
@@ -176,7 +179,7 @@ const Contact = () => {
                     Phone
                   </Text>
                   <Text color="black" fontSize="12px" fontWeight={"medium"}>
-                  (905) 965-0448
+                    (905) 965-0448
                   </Text>
                 </VStack>
               </Flex>
@@ -190,7 +193,7 @@ const Contact = () => {
                     Address
                   </Text>
                   <Text color="black" fontSize="12px" fontWeight={"medium"}>
-                  5800 Ambler Dr #210, Mississauga, ON L4W 4J4
+                    5800 Ambler Dr #210, Mississauga, ON L4W 4J4
                   </Text>
                 </VStack>
               </Flex>
@@ -203,19 +206,19 @@ const Contact = () => {
                     Email
                   </Text>
                   <Text color="black" fontSize="12px" fontWeight={"medium"}>
-                    example@email.com
+                    info@enrichemployment.ca
                   </Text>
                 </VStack>
               </Flex>
             </VStack>
             <Image
-            display={{ base: "none", md: "block" }}
+              display={{ base: "none", md: "block" }}
               src={EnrichMap}
               alt="Contact"
-              objectFit="cover" 
+              objectFit="cover"
               height="100%"
               m={5}
-              w={{md: "50%", lg: "full"}}
+              w={{ md: "50%", lg: "full" }}
               boxShadow={"xl"}
               border={"1px solid gray"}
             />

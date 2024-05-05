@@ -17,7 +17,13 @@ const About = () => {
               About Us
             </Text>
             <Divider w={"50%"} />
-            <Text w={"50%"} color={"white"}>
+            <Text
+              w={"50%"}
+              color={"white"}
+              fontSize={["md", "lg"]}
+              transition="all 0.3s"
+              _hover={{ fontSize: ["lg", "xl"] }}
+            >
               At Enrich Employment, client satisfaction is our top priority. We
               are dedicated to providing enhanced employment solutions tailored
               to your needs. Our commitment extends to ensuring quality and
