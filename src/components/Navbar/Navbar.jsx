@@ -15,7 +15,7 @@ import Hamburger from "hamburger-react";
 import { useState } from "react";
 import { AiFillHome, AiOutlineTeam, AiOutlineSetting } from "react-icons/ai";
 import { GrContactInfo } from "react-icons/gr";
-import EnrichLogo from "../../assets/EnrichLogo.jpeg";
+import EnrichLogo from "../../assets/EnrichLogo.png";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);

@@ -39,7 +39,7 @@ const Slider = () => {
           alignItems={"center"}
           flexDirection={"column"}
         >
-          <Text fontSize={48} width={"66%"} textAlign={"center"}>
+          <Text fontSize={{base: 34, md:42}} width={"66%"} textAlign={"center"}>
             Your Shortcut to{" "}
             <Text as={"span"}  textShadow="1px 1px 0 #FFF, -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF" color={"#1B5D4F"} fontWeight={"bold"}>
               Skilled Professionals

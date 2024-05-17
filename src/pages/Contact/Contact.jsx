@@ -1,17 +1,13 @@
 import {
   Flex,
-  Button,
   VStack,
   Box,
   Text,
   Container,
-  FormControl,
-  Input,
-  FormLabel,
   Image,
 } from "@chakra-ui/react";
 import { FaPhoneAlt } from "react-icons/fa";
-import { AiOutlineMail, AiOutlineUpload } from "react-icons/ai";
+import { AiOutlineMail} from "react-icons/ai";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useRef, useState } from "react";
 import Book from "../../assets/Book.jpg";
